@@ -18,7 +18,52 @@
 
 //* Solution :-
 
-function findLongestWord(str) {}
+function findLongestWord(str) {
+  str = str.trim();
+
+  if (str.length === 0) {
+    return false;
+  }
+
+  let words = str.split(" ");
+
+  let longestWord = words[0];
+
+  for (let i = 1; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i];
+    }
+  }
+  return longestWord;
+}
+
 let str = "watch my latest post on Instagram";
+
 let res = findLongestWord(str);
-console.log(res);
+
+// console.log(res);
+
+// 6200062893
+// 7481069563
+
+// Another Way to do using sort method:-
+
+function findLongesT(string) {
+  string = string.trim();
+  if (string.length === 0) {
+    return false;
+  }
+  let words = string.split(" ");
+  console.log(words);
+
+  words.sort((a, b) => b.length - a.length);
+  console.log(words);
+  return words[0];
+}
+
+let string =
+  "breakup hurts when the reason is nothing and you are suffering a lot";
+
+let result = findLongesT(string);
+
+console.log(result);
