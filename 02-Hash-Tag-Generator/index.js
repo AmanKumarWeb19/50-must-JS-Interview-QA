@@ -31,22 +31,22 @@ function generateHashTag(str) {
   return str;
 }
 
-// console.log(generateHashTag("my name is aman"));
+console.log(generateHashTag("my name is aman"));
 
 //..............................................Using for loop..............................................
 
-function HashTag(str) {
-  if (str.length > 280 || str.trim().length === 0) {
-    return false;
-  }
-  let words = str.split(" ");
-  let res = "#";
+// function HashTag(str) {
+//   if (str.length > 280 || str.trim().length === 0) {
+//     return false;
+//   }
+//   let words = str.split(" ");
+//   let res = "#";
 
-  for (let i = 0; i < words.length; i++) {
-    if (words[i] !== "") {
-      res += words[i][0].toUpperCase() + words[i].slice(1);
-    }
-  }
-  return res;
-}
-console.log(HashTag("my name is ram"));
+//   for (let i = 0; i < words.length; i++) {
+//     if (words[i] !== "") {
+//       res += words[i][0].toUpperCase() + words[i].slice(1);
+//     }
+//   }
+//   return res;
+// }
+// console.log(HashTag("my name is ram"));
