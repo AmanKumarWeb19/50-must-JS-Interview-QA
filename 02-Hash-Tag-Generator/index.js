@@ -14,3 +14,21 @@
 //? only whitespace the function should return false.
 
 //? OtherWise , the function should return the generated hash tag prefixed with #.
+
+//.............................................SOLUTION.......................................................
+
+function generateHashTag(str) {
+  if (str.length > 280 || str.trim().length === 0) {
+    return false;
+  }
+  str = str.split(" ");
+
+  str = str.map((curElem) =>
+    curElem.replace(curElem[0], curElem[0].toUpperCase())
+  );
+  str = `#${str.join("")}`;
+
+  return str;
+}
+
+console.log(generateHashTag("my name is aman"));
